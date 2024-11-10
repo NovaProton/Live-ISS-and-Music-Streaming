@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>LiveISS and Music</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+		<link rel="stylesheet" href="css/style.css">
+	</head>
+	<body>
+		<div id="video-container">
+			<div id="staticImage"></div>
+			<div id="overlay"></div>
+			<button id="playPauseButton"><i class="fas fa-play"></i></button>
+			<div id="player"></div>
+			<audio id="lofiStream" preload="none"></audio>
+
+			<select id="musicSelector" style="position: absolute; bottom: 10px; right: 10px; z-index: 3;">
+				<option value="https://streams.fluxfm.de/Chillhop/mp3-320/streams.fluxfm.de/">LoFi</option>
+				<option value="https://live.wostreaming.net/direct/ppm-jazz24mp3-ibc1">Jazz</option>
+				<option value="http://media-ice.musicradio.com/ClassicFM">Classical</option>
+				<option value="https://media-ice.musicradio.com/Capital">Capital (London)</option>
+				<option value="">No Sound</option>
+				<!-- Add more options here -->
+			</select>
+
+			<iframe
+				id="issTracker"
+				sandbox="allow-same-origin allow-scripts"
+				src="https://isstracker.spaceflight.esa.int/"
+				style="border: 0 none transparent; "
+				id="iss-pos"
+				width="625"
+				height="350"
+				frameborder="0"
+				scrolling="no"
+				allowfullscreen=""
+				title="ESU ISS tracking map"
+			>
+				ESA ISS tracking map
+			</iframe>
+			<button id="issButton"><i class="fas fa-satellite"></i></button>
+			<!-- ISS Button -->
+
+			<button id="infoButton"><i class="fas fa-info-circle"></i></button>
+		</div>
+		<div id="infoModal">
+			<div id="infoContent">
+				<h1>LiveISS and Music</h1>
+				<p>
+					This simple site plays LoFi and live views from the ISS <br />
+					(International Space Station). The image quality all depends on the ISS.<br />
+					<br />
+					<a href="https://www.youtube.com/watch?v=KG6SL6Mf7ak" target="_blank">Live on YourTube</a>
+				</p>
+				<button class="close-button" onclick="closeInfo()">Close</button>
+			</div>
+		</div>
+		<script src="https://www.youtube.com/iframe_api"></script>
+		<script  src="js/index.js"></script>
+
+	</body>
+</html>

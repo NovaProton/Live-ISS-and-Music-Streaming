@@ -1,0 +1,134 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+  #video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+  #overlay, #staticImage {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  #staticImage {
+    background: url('../UKIss.jpg') no-repeat center center;
+    background-size: cover;
+  }
+  #playPauseButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-size: 48px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  #playPauseButton.hidden {
+    opacity: 0 !important;
+  }
+  #infoButton {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    z-index: 3;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
+  #infoModal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 4;
+  }
+  #infoContent {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .close-button {
+  background-color: #f44336; /* Red background */
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.9;
+  cursor: pointer;
+  border-radius: 12px;
+}
+.close-button:hover {
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+}
+#musicSelector {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  background-color: #f44336; /* Red background */
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 16px;
+  margin: 4px 2px;
+  opacity: 0.9;
+  cursor: pointer;
+  border-radius: 12px;
+}
+#musicSelector:hover {
+  background-color: #f44336;
+  color: white;
+  opacity: 1;
+}
+
+#issTracker {
+display: none;
+position: absolute;
+bottom: 100px;  /* Adjusted position */
+left: 10px;
+z-index: 5;
+}
+
+#issButton {
+position: absolute;
+bottom: 50px;
+left: 10px;  /* Changed from 'right' to 'left' */
+z-index: 3;
+font-size: 24px;
+background: none;
+border: none;
+color: white;
+cursor: pointer;
+}
