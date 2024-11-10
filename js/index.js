@@ -38,7 +38,7 @@ var player;
 			      playPauseIcon.className = "fas fa-play";
 			      staticImage.style.zIndex = 1;
 			    } else {
-			      player.loadVideoById('KG6SL6Mf7ak');
+			      player.loadVideoById('O9mYwRlucZY');
 			      player.mute();
 			      lofiAudio.load();
 			      lofiAudio.play();
