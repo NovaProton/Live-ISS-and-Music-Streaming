@@ -38,3 +38,5 @@ This project provides a simple interface for watching live views from the Intern
 
 ## License
 This project is open-source and available under the MIT License.
+
+This project is tested with [BrowserStack.](https://www.browserstack.com/)
